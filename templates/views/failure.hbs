@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> headers}}
+
+<body>
+    {{> navbar}}
+
+    <div class="container-fluid result">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="img/failure.png" alt="Unsuccessful">
+            </div>
+            <div class="col-lg-6">
+                <h1>Uh-oh! Bad weather.</h1>
+                <h3>There was an error in signing you up.</h3>
+                <form class="" action="/failure" method="post">
+                    <button type="submit" class="btn btn-lg btn-warning" id="try">Try again</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{> footer}}
+</body>
+
+</html>

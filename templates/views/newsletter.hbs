@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> headers}}
+
+<body>
+  {{> navbar}}
+  <main class="form-signin">
+    <form method="POST" action="/signup">
+      <img class="mb-4" src="img/news.png" alt="" width="95" height="80">
+      <h1 class="h3 mb-3 fw-normal">Sign up for our newsletter.</h1>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingFirst" name="fname" placeholder="First name">
+        <label for="floatingInput">First name</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingSecond" name="lname" placeholder="Second name">
+        <label for="floatingInput">Second name</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+
+      <button class="w-100 btn btn-lg" type="submit">Sign up</button>
+    </form>
+  </main>
+
+
+  {{> footer}}
+</body>
+
+</html>

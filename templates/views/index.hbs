@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> headers}}
+
+<body>
+
+  <section class="home">
+    {{> navbar}}
+    <div class="container-fluid main">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="homeHeading">Weather just a click away. Capture now!</h1>
+
+          <button type="button" class="btn btn-dark btn-lg" onclick="location.href='/weather'" id="homeBtn"><i
+              class="fas fa-search"></i> Go now!</button>
+        </div>
+        <div class="col-lg-6">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img src="img/sunny.png" class="d-block w-100 img-box" alt="sunny">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/winter.png" class="d-block w-100" alt="winter">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/rain.png" class="d-block w-100" alt="rain">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/spring.png" class="d-block w-100" alt="spring">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- Features -->
+
+  <section id="features" class="white-section">
+    <div class="container-fluid" id="middle-container">
+      <div class="row">
+
+        <div class="col-lg-4 feature">
+          <i class="fas fa-check-circle icon"></i>
+          <h3><b>Easy to use.</b></h3>
+          <p>It is even easier than clicking selfies!</p>
+        </div>
+        <div class="col-lg-4 feature">
+          <i class="fab fa-searchengin icon"></i>
+          <h3><b>Forecast.</b></h3>
+          <p>Keep track of weather, a week ahead.</p>
+        </div>
+        <div class="col-lg-4 feature">
+          <i class="fas fa-envelope-open-text icon"></i>
+          <h3><b>Weather-letter.</b></h3>
+          <p>Sign up to our newletter to get latest weather updates.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {{> footer}}
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> headers}}
+
+<body>
+  {{> navbar}}
+
+  {{!-- Search box --}}
+  <div class="row search-div">
+    <div class="col-lg-8">
+      <input type="text" class="search-box" placeholder="Enter city" name="city">
+      <button type="submit" name="button" class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  {{!-- Error --}}
+  <div class="none" id="error">
+    <h1>Enter any city to search.</h1>
+  </div>
+
+  {{!-- Weather Card --}}
+  <div class="container-fluid hide" id="body">
+
+    <div class="row">
+
+      {{!-- Left side --}}
+      <div class="col-lg-7 left">
+        <div class="row">
+          <div class="col-lg-8">
+            <h4><i class="fas fa-map-marker-alt d-icon"></i> <span class="city-name">Mumbai, IN</span></h4>
+            <p><span class="date-time">Monday, 24 May</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 id="temp"><span class="temp">36 </span><sup>o</sup>C</h1>
+            <p class="desc">Few clouds</p>
+          </div>
+          <div class="col-lg-5 weather-icon">
+            <img src="" alt="" class="weather-image">
+          </div>
+        </div>
+        <div class="row bottom">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <i class="fas fa-tint para"></i>
+            <p>Humidity: <span class="humidity">80</span>%</p>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <i class="fas fa-wind para"></i>
+            <p>Wind: <span class="wind">180</span>m/s</p>
+          </div>
+        </div>
+      </div>
+
+      {{!-- Right side --}}
+      <div class="col-lg-5 right">
+        <ul class="week-days">
+          <li class="day-details">
+            <span class="days">Mon</span><span class="week-temp"></span>
+          </li>
+          <li class="day-details">
+            <span class="days">Mon</span><span class="week-temp"></span>
+          </li>
+          <li class="day-details">
+            <span class="days">Mon</span><span class="week-temp"></span>
+          </li>
+          <li class="day-details">
+            <span class="days">Mon</span><span class="week-temp"></span>
+          </li>
+          <li class="day-details">
+            <span class="days">Mon</span><span class="week-temp"></span>
+          </li>
+          <li class="day-details">
+            <span class="days">Mon</span><span class="week-temp"></span>
+          </li>
+          <li class="day-details">
+            <span class="days">Mon</span><span class="week-temp"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{> footer}}
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
