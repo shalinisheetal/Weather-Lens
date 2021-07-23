@@ -2,6 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 const https = require("https");
+const constants = require(__dirname + "/config.js");
 const port = process.env.PORT || 3000;
 
 const app = express();
@@ -53,10 +54,10 @@ app.post("/signup", function (req, res) {
     }, ],
   };
   const jsonData = JSON.stringify(data);
-  const url = "https://us1.api.mailchimp.com/3.0/lists/eed95ab12a";
+  const url = constants.mailchimp.BASE_URL + constants.mailchimp.LIST_ID;
   const options = {
     method: "POST",
-    auth: "Shalini:81d7ae55a37b093439f645253c8c2dda-us1",
+    auth: constants.mailchimp.AUTH
   };
 
   const request = https.request(url, options, function (response) {
