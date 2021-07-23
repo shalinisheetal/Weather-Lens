@@ -2,7 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 const https = require("https");
-const constants = require(__dirname + "/config.js");
+const constants = require(path.join(__dirname, "../config.js"));
 const port = process.env.PORT || 3000;
 
 const app = express();
