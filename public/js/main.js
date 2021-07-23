@@ -1,5 +1,3 @@
-const constants = require(path.join(__dirname, "../../config.js"));
-
 const city = document.getElementsByClassName("search-box")[0];
 const cityName = document.getElementsByClassName("city-name")[0];
 const submit = document.getElementsByClassName("search-btn")[0];
@@ -32,8 +30,7 @@ const getWeather = async (event) => {
     try {
 
       // Today
-      const key = constants.openWeatherMap.API_KEY;
-      console.log(constants);
+      const key = "5b371371f3e5e12c2b6bd1f501b53754";
       let url1 = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&units=metric&appid=` + key;
 
       const response1 = await fetch(url1);
